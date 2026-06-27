@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chi tiết các dịch vụ thương mại quốc tế, cung ứng vật tư, logistics vận tải và ủy thác xuất nhập khẩu hải quan của Luân Thành Phát.">
+    <meta name="author" content="Benny Chen">
+    <title>Dịch vụ - Công ty TNHH Thương mại Dịch vụ Luân Thành Phát</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+  <script type="module" crossorigin src="/web/assets/app-D3-2SWvT.js"></script>
+  <link rel="stylesheet" crossorigin href="/web/assets/app-5NBnu_0j.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-brand">
+                <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                    <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                    <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                </svg>
+                <div class="logo-text-group">
+                    <span class="logo-subtext" data-i18n="card_comp_type">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                    <span class="logo-maintext">LUÂN THÀNH PHÁT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="gioi-thieu.html" class="nav-link" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="dich-vu.html" class="nav-link active" data-i18n="nav_services">Dịch vụ</a></li>
+                    <li><a href="index.html#tai-sao-chon-dung" class="nav-link" data-i18n="nav_why_us">Tại sao chọn chúng tôi</a></li>
+                    <li><a href="lien-he.html" class="nav-link" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Selector Dropdown -->
+                <div class="lang-selector">
+                    <button class="lang-btn" id="langBtn" aria-expanded="false" aria-label="Select Language">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="globe-icon">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="lang-text" id="currentLangText">VI</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="vi">
+                            <span class="lang-name">Tiếng Việt</span>
+                        </button>
+                        <button class="lang-option" data-lang="zh">
+                            <span class="lang-name">繁體中文</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-name">English</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="lien-he.html" class="btn btn-primary btn-sm" data-i18n="btn_contact_now">Liên hệ ngay</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Page Hero Section -->
+        <section class="hero-section inner-hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container text-center">
+                <div class="scroll-reveal">
+                    <h1 class="hero-headline" data-i18n="services_hero_title">Dịch vụ của chúng tôi</h1>
+                    <p class="hero-slogan" data-i18n="services_hero_subtitle">Giải pháp Supply Chain toàn diện, hỗ trợ tối đa cho hoạt động kinh doanh quốc tế của doanh nghiệp.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Services Grid -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-3">
+                    
+                    <!-- Service 1 Detail Card -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                        </div>
+                        <h3 data-i18n="services_detail_s1_title">1. Thương mại & Cung ứng quốc tế</h3>
+                        <p data-i18n="services_detail_s1_text">Chúng tôi kết nối trực tiếp với các nhà sản xuất hàng đầu để cung ứng trang thiết bị, máy móc công nghiệp và nguyên liệu sản xuất. Hỗ trợ khách hàng tìm kiếm đối tác uy tín, thương lượng giá cả tốt nhất và kiểm tra chất lượng sản phẩm tại xưởng sản xuất.</p>
+                    </div>
+
+                    <!-- Service 2 Detail Card -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <h3 data-i18n="services_detail_s2_title">2. Dịch vụ Logistics & Vận tải liên phương thức</h3>
+                        <p data-i18n="services_detail_s2_text">Luân Thành Phát cung cấp chuỗi logistics khép kín từ vận tải đường biển (FCL/LCL), đường hàng không, đường bộ nội địa cho đến kho bãi. Chúng tôi tối ưu hóa tuyến đường vận chuyển để tiết kiệm chi phí và đảm bảo an toàn tuyệt đối cho hàng hóa.</p>
+                    </div>
+
+                    <!-- Service 3 Detail Card -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        </div>
+                        <h3 data-i18n="services_detail_s3_title">3. Ủy thác Xuất nhập khẩu & Thủ tục Hải quan</h3>
+                        <p data-i18n="services_detail_s3_text">Chúng tôi thay mặt doanh nghiệp xử lý mọi chứng từ pháp lý phức tạp, tờ khai hải quan, xin giấy phép chuyên ngành (kiểm tra chất lượng, CO, CQ) và đảm bảo thông quan nhanh chóng tại các cửa khẩu, cảng biển Việt Nam.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Timeline Section -->
+        <section class="why-us-section section-padding">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-badge" data-i18n="services_proc_title">Quy trình làm việc</span>
+                    <h2 class="section-title" data-i18n="services_proc_title">Quy trình làm việc chuyên nghiệp</h2>
+                </div>
+
+                <div class="grid grid-4">
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">1</div>
+                        <h3 data-i18n="services_step1_title">Bước 1: Tiếp nhận & Tư vấn</h3>
+                        <p data-i18n="services_step1_desc">Phân tích yêu cầu cụ thể của khách hàng về nguồn hàng, tuyến đường và ngân sách.</p>
+                    </div>
+
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">2</div>
+                        <h3 data-i18n="services_step2_title">Bước 2: Báo giá & Hợp đồng</h3>
+                        <p data-i18n="services_step2_desc">Xây dựng phương án tối ưu, báo giá chi tiết và ký hợp đồng nguyên tắc bảo vệ quyền lợi hai bên.</p>
+                    </div>
+
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">3</div>
+                        <h3 data-i18n="services_step3_title">Bước 3: Thực hiện & Giám sát</h3>
+                        <p data-i18n="services_step3_desc">Tiến hành thu mua, vận chuyển, làm thủ tục hải quan và cập nhật lộ trình liên tục.</p>
+                    </div>
+
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">4</div>
+                        <h3 data-i18n="services_step4_title">Bước 4: Giao hàng & Nghiệm thu</h3>
+                        <p data-i18n="services_step4_desc">Giao hàng an toàn đến kho của khách hàng, bàn giao bộ chứng từ gốc và hoàn tất quyết toán.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo-brand">
+                    <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                        <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                        <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                    </svg>
+                    <div class="logo-text-group">
+                        <span class="logo-subtext footer-logo-subtext" data-i18n="card_comp_type">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                        <span class="logo-maintext footer-logo-maintext">LUÂN THÀNH PHÁT</span>
+                    </div>
+                </a>
+                <p class="brand-desc" data-i18n="footer_desc">Sự hài lòng của khách hàng và uy tín dịch vụ là kim chỉ nam hàng đầu trong mọi hoạt động thương mại của chúng tôi.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 data-i18n="footer_quick_links">Đường dẫn nhanh</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="gioi-thieu.html" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="dich-vu.html" data-i18n="nav_services">Dịch vụ</a></li>
+                    <li><a href="index.html#tai-sao-chon-dung" data-i18n="nav_why_us">Tại sao chọn chúng tôi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-col">
+                <h4 data-i18n="footer_contact_header">Liên hệ</h4>
+                <p><strong data-i18n="footer_addr_label">Địa chỉ:</strong> Đường D16, Ấp 2, Xã Long An, Huyện Long Thành, Tỉnh Đồng Nai</p>
+                <p><strong>Hotline:</strong> +84 966 816118 / +86 931 039881</p>
+                <p><strong>Mã số thuế:</strong> 3603747541</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p data-i18n="footer_copyright">&copy; 2026 Công ty TNHH Thương mại Dịch vụ Luân Thành Phát. All Rights Reserved.</p>
+                <p data-i18n="footer_designer">Được thiết kế chuyên nghiệp & uy tín.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Custom JavaScript -->
+</body>
+</html>

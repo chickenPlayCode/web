@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hành trình phát triển, tầm nhìn, sứ mệnh và giá trị cốt lõi của Công ty TNHH Thương mại Dịch vụ Luân Thành Phát.">
+    <meta name="author" content="Benny Chen">
+    <title>Giới thiệu - Công ty TNHH Thương mại Dịch vụ Luân Thành Phát</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+  <script type="module" crossorigin src="/web/assets/app-D3-2SWvT.js"></script>
+  <link rel="stylesheet" crossorigin href="/web/assets/app-5NBnu_0j.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-brand">
+                <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                    <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                    <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                </svg>
+                <div class="logo-text-group">
+                    <span class="logo-subtext" data-i18n="card_comp_type">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                    <span class="logo-maintext">LUÂN THÀNH PHÁT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="gioi-thieu.html" class="nav-link active" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="dich-vu.html" class="nav-link" data-i18n="nav_services">Dịch vụ</a></li>
+                    <li><a href="index.html#tai-sao-chon-dung" class="nav-link" data-i18n="nav_why_us">Tại sao chọn chúng tôi</a></li>
+                    <li><a href="lien-he.html" class="nav-link" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Selector Dropdown -->
+                <div class="lang-selector">
+                    <button class="lang-btn" id="langBtn" aria-expanded="false" aria-label="Select Language">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="globe-icon">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="lang-text" id="currentLangText">VI</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="vi">
+                            <span class="lang-name">Tiếng Việt</span>
+                        </button>
+                        <button class="lang-option" data-lang="zh">
+                            <span class="lang-name">繁體中文</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-name">English</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="lien-he.html" class="btn btn-primary btn-sm" data-i18n="btn_contact_now">Liên hệ ngay</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Page Hero Section -->
+        <section class="hero-section inner-hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container text-center">
+                <div class="scroll-reveal">
+                    <h1 class="hero-headline" data-i18n="about_hero_title">Về Luân Thành Phát</h1>
+                    <p class="hero-slogan" data-i18n="about_hero_subtitle">Hành trình phát triển bền vững và uy tín thương mại.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision and Mission Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="about-text-content scroll-reveal">
+                        <span class="section-badge" data-i18n="about_vision_title">Tầm nhìn</span>
+                        <h2 class="section-title" data-i18n="about_vision_title">Tầm nhìn</h2>
+                        <p class="about-desc" data-i18n="about_vision_desc">Trở thành biểu tượng uy tín hàng đầu trong lĩnh vực thương mại và cung ứng logistics tại Việt Nam và khu vực, kết nối giao thương thuận lợi giữa các đối tác trong và ngoài nước.</p>
+                    </div>
+                    <div class="about-text-content scroll-reveal">
+                        <span class="section-badge" data-i18n="about_mission_title">Sứ mệnh</span>
+                        <h2 class="section-title" data-i18n="about_mission_title">Sứ mệnh</h2>
+                        <p class="about-desc" data-i18n="about_mission_desc">Chúng tôi cam kết cung cấp giải pháp tối ưu, chất lượng dịch vụ vượt trội để tối đa hóa giá trị cho khách hàng, đồng hành cùng sự phát triển thịnh vượng của đối tác.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Details -->
+        <section class="why-us-section section-padding">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-badge" data-i18n="about_values_title">Giá trị cốt lõi</span>
+                    <h2 class="section-title" data-i18n="about_values_title">Giá trị cốt lõi</h2>
+                    <p class="section-subtitle" data-i18n="about_values_desc">Nền tảng phát triển của chúng tôi dựa trên các giá trị thiết thực:</p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3 data-i18n="about_val1_title">Chất lượng</h3>
+                        <p data-i18n="about_val1_desc">Đặt tiêu chuẩn chất lượng cao nhất cho mọi sản phẩm và dịch vụ.</p>
+                    </div>
+
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 data-i18n="about_val2_title">Đúng hẹn</h3>
+                        <p data-i18n="about_val2_desc">Đảm bảo đúng thời gian, tiến độ giao hàng và thông quan.</p>
+                    </div>
+
+                    <div class="why-card scroll-reveal">
+                        <div class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 data-i18n="about_val3_title">Hợp tác</h3>
+                        <p data-i18n="about_val3_desc">Tôn trọng, lắng nghe và chia sẻ lợi ích cùng khách hàng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message from Director -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="about-image-wrapper scroll-reveal">
+                        <div class="about-image-decor"></div>
+                        <div class="about-image">
+                            <div class="experience-card">
+                                <span class="exp-title" data-i18n="about_exp_title">Tận Tâm - Uy Tín</span>
+                                <span class="exp-subtitle" data-i18n="about_exp_subtitle">Phương châm hàng đầu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text-content scroll-reveal">
+                        <span class="section-badge" data-i18n="about_director_title">Thông điệp từ Ban Giám Đốc</span>
+                        <h2 class="section-title" data-i18n="about_director_title">Thông điệp từ Ban Giám Đốc</h2>
+                        <blockquote class="director-quote">
+                            <p class="about-desc" data-i18n="about_director_speech1">Chào mừng quý khách hàng đến với Luân Thành Phát. Chúng tôi hiểu rằng trong bối cảnh thương mại toàn cầu biến động, sự ổn định, an toàn và uy tín của đối tác cung ứng dịch vụ là yếu tố sống còn của doanh nghiệp.</p>
+                            <p class="about-desc" data-i18n="about_director_speech2">Với nhiều năm kinh nghiệm kết nối giao thương giữa Việt Nam và các đối tác quốc tế, tôi và đội ngũ Luân Thành Phát cam kết mang lại sự an tâm tuyệt đối cho từng lô hàng, từng thủ tục pháp lý. Cảm ơn sự tin tưởng của bạn.</p>
+                            <cite class="director-name">— Benny Chen, <span data-i18n="card_director_label">Giám đốc</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo-brand">
+                    <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                        <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                        <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                    </svg>
+                    <div class="logo-text-group">
+                        <span class="logo-subtext footer-logo-subtext" data-i18n="card_comp_type">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                        <span class="logo-maintext footer-logo-maintext">LUÂN THÀNH PHÁT</span>
+                    </div>
+                </a>
+                <p class="brand-desc" data-i18n="footer_desc">Sự hài lòng của khách hàng và uy tín dịch vụ là kim chỉ nam hàng đầu trong mọi hoạt động thương mại của chúng tôi.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 data-i18n="footer_quick_links">Đường dẫn nhanh</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="gioi-thieu.html" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="dich-vu.html" data-i18n="nav_services">Dịch vụ</a></li>
+                    <li><a href="index.html#tai-sao-chon-dung" data-i18n="nav_why_us">Tại sao chọn chúng tôi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-col">
+                <h4 data-i18n="footer_contact_header">Liên hệ</h4>
+                <p><strong data-i18n="footer_addr_label">Địa chỉ:</strong> Đường D16, Ấp 2, Xã Long An, Huyện Long Thành, Tỉnh Đồng Nai</p>
+                <p><strong>Hotline:</strong> +84 966 816118 / +86 931 039881</p>
+                <p><strong>Mã số thuế:</strong> 3603747541</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p data-i18n="footer_copyright">&copy; 2026 Công ty TNHH Thương mại Dịch vụ Luân Thành Phát. All Rights Reserved.</p>
+                <p data-i18n="footer_designer">Được thiết kế chuyên nghiệp & uy tín.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Custom JavaScript -->
+</body>
+</html>
