@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // CẤU HÌNH FORMSPREE: Thay "YOUR_FORMSPREE_ID" bằng mã ID Form của bạn từ Formspree.io
                 // Ví dụ: const formspreeId = "mvgonpqr";
-                const formspreeId = "YOUR_FORMSPREE_ID"; 
+                const formspreeId = "xqevqwrb"; 
                 const endpoint = `https://formspree.io/f/${formspreeId}`;
                 
                 const formData = {
