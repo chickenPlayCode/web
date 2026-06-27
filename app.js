@@ -1,12 +1,98 @@
 /**
  * JavaScript Interactions for Công ty TNHH TMDV Luân Thành Phát
- * Features: Mobile menu toggle, Header on scroll, Scroll reveal, Active nav state, Form handler
+ * Features: Mobile menu toggle, Header on scroll, Scroll reveal, Active nav state, Language Switcher, Form handler
  */
+
+import translations from './translations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     
     // ==========================================
-    // 1. Sticky Header & Back to Top Toggle
+    // 1. Language Switcher Logic
+    // ==========================================
+    let currentLang = localStorage.getItem('lang') || 'vi';
+    
+    const langBtn = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const currentFlag = document.getElementById('currentFlag');
+    const currentLangText = document.getElementById('currentLangText');
+
+    const flags = {
+        vi: '🇻🇳',
+        zh: '🇹🇼',
+        en: '🇬🇧'
+    };
+
+    const updateLanguage = (lang) => {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang;
+        
+        // Update button text and flag
+        if (currentFlag) currentFlag.textContent = flags[lang];
+        if (currentLangText) currentLangText.textContent = lang.toUpperCase();
+        
+        // Update active state in dropdown
+        langOptions.forEach(opt => {
+            if (opt.getAttribute('data-lang') === lang) {
+                opt.classList.add('active');
+            } else {
+                opt.classList.remove('active');
+            }
+        });
+        
+        // Translate standard elements
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+        
+        // Translate placeholder elements
+        const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+        placeholders.forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang] && translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+    };
+
+    // Toggle Dropdown
+    if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isExpanded = langBtn.getAttribute('aria-expanded') === 'true';
+            langBtn.setAttribute('aria-expanded', !isExpanded);
+            langDropdown.classList.toggle('show');
+        });
+
+        // Close dropdown on click outside
+        document.addEventListener('click', () => {
+            langBtn.setAttribute('aria-expanded', 'false');
+            langDropdown.classList.remove('show');
+        });
+    }
+
+    // Handle Option Click
+    langOptions.forEach(opt => {
+        opt.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const lang = opt.getAttribute('data-lang');
+            updateLanguage(lang);
+            if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
+            if (langDropdown) langDropdown.classList.remove('show');
+        });
+    });
+
+    // Initialize Language on load
+    updateLanguage(currentLang);
+
+    // ==========================================
+    // 2. Sticky Header & Back to Top Toggle
     // ==========================================
     const header = document.getElementById('header');
     const backToTopBtn = document.getElementById('backToTop');
@@ -15,59 +101,67 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPos = window.scrollY;
         
         // Header sticky background change
-        if (scrollPos > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (header) {
+            if (scrollPos > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         }
         
         // Back to top button show/hide
-        if (scrollPos > 500) {
-            backToTopBtn.classList.add('active');
-        } else {
-            backToTopBtn.classList.remove('active');
+        if (backToTopBtn) {
+            if (scrollPos > 500) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
         }
     };
     
     window.addEventListener('scroll', handleScrollEffects);
-    // Initial run in case page starts scrolled
-    handleScrollEffects();
+    handleScrollEffects(); // Initial run
 
     // Scroll back to top smoothly
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 
     // ==========================================
-    // 2. Mobile Navigation Toggle
+    // 3. Mobile Navigation Toggle
     // ==========================================
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
     
     const toggleMenu = () => {
-        mobileToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        // Prevent body scrolling when mobile menu is open
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        if (mobileToggle && navMenu) {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
     };
 
-    mobileToggle.addEventListener('click', toggleMenu);
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleMenu);
+    }
 
     // Close menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navMenu.classList.contains('active')) {
                 toggleMenu();
             }
         });
     });
 
     // ==========================================
-    // 3. Scroll Reveal Animations
+    // 4. Scroll Reveal Animations
     // ==========================================
     const revealElements = document.querySelectorAll('.scroll-reveal');
     
@@ -75,13 +169,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
-                // Unobserve since we only want to reveal once
                 observer.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px' // Trigger slightly before element is in full view
+        rootMargin: '0px 0px -50px 0px'
     });
 
     revealElements.forEach(element => {
@@ -89,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 4. Active Nav Link Indicator on Scroll
+    // 5. Active Nav Link Indicator on Scroll
     // ==========================================
     const sections = document.querySelectorAll('section[id]');
     
@@ -113,69 +206,80 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightNavMenu(); // Initial run
 
     // ==========================================
-    // 5. Contact Form Validation & Submission
+    // 6. Contact Form Validation & Submission
     // ==========================================
     const contactForm = document.getElementById('contactForm');
     const formFeedback = document.getElementById('formFeedback');
     const submitBtn = document.getElementById('formSubmitBtn');
     
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Clear previous feedback
-        formFeedback.className = 'form-feedback';
-        formFeedback.style.display = 'none';
-        
-        // Grab inputs
-        const name = document.getElementById('formName').value.trim();
-        const email = document.getElementById('formEmail').value.trim();
-        const phone = document.getElementById('formPhone').value.trim();
-        const message = document.getElementById('formMessage').value.trim();
-        
-        // Basic validations
-        if (!name || !email || !phone || !message) {
-            showFeedback('Vui lòng nhập đầy đủ các trường thông tin có dấu (*).', 'error');
-            return;
-        }
-        
-        // Validate Vietnamese phone number: starts with 0 or +84, followed by 9 digits
-        const phoneRegex = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
-        if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
-            showFeedback('Số điện thoại không hợp lệ. Vui lòng nhập đúng định dạng số điện thoại Việt Nam (ví dụ: 0966816118).', 'error');
-            return;
-        }
-        
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            showFeedback('Địa chỉ email không đúng định dạng. Vui lòng kiểm tra lại.', 'error');
-            return;
-        }
-        
-        // Mocking API Submission
-        submitBtn.disabled = true;
-        const originalBtnText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span>Đang gửi yêu cầu...</span>';
-        
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
             
-            showFeedback(`Cảm ơn <strong>${name}</strong>! Yêu cầu tư vấn của bạn đã được gửi đi thành công. Giám đốc <strong>Benny Chen</strong> hoặc bộ phận tư vấn sẽ liên hệ lại với bạn qua số điện thoại <strong>${phone}</strong> hoặc email <strong>${email}</strong> trong thời gian sớm nhất!`, 'success');
+            // Clear previous feedback
+            if (formFeedback) {
+                formFeedback.className = 'form-feedback';
+                formFeedback.style.display = 'none';
+            }
             
-            // Reset form
-            contactForm.reset();
-        }, 1500);
-    });
+            // Grab inputs
+            const name = document.getElementById('formName').value.trim();
+            const email = document.getElementById('formEmail').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const message = document.getElementById('formMessage').value.trim();
+            
+            // Basic validations
+            if (!name || !email || !phone || !message) {
+                showFeedback(translations[currentLang].form_error_required, 'error');
+                return;
+            }
+            
+            // Validate phone number: support both local (0...) and international (+...) formats
+            const phoneRegex = /^[0-9\+\s\-\(\)]{8,20}$/;
+            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+                showFeedback(translations[currentLang].form_error_phone, 'error');
+                return;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showFeedback(translations[currentLang].form_error_email, 'error');
+                return;
+            }
+            
+            // Mocking API Submission
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = `<span>${translations[currentLang].form_status_sending}</span>`;
+                
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                    
+                    const successMsg = translations[currentLang].form_success_msg
+                        .replace('{name}', name)
+                        .replace('{phone}', phone)
+                        .replace('{email}', email);
+                    showFeedback(successMsg, 'success');
+                    
+                    // Reset form
+                    contactForm.reset();
+                }, 1500);
+            }
+        });
+    }
     
     const showFeedback = (text, type) => {
-        formFeedback.innerHTML = text;
-        formFeedback.className = `form-feedback ${type}`;
-        formFeedback.style.display = 'block';
-        
-        // Scroll slightly to feedback message for UX on mobile
-        if (type === 'error') {
-            formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (formFeedback) {
+            formFeedback.innerHTML = text;
+            formFeedback.className = `form-feedback ${type}`;
+            formFeedback.style.display = 'block';
+            
+            if (type === 'error') {
+                formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         }
     };
 });
