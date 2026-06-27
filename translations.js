@@ -139,7 +139,9 @@ const translations = {
     contact_map_title: "Vị trí của chúng tôi trên Google Maps",
     contact_hours_title: "Giờ làm việc",
     contact_hours_week: "Thứ 2 - Thứ 7: 8h00 - 17h30",
-    contact_hours_sunday: "Chủ nhật: Nghỉ"
+    contact_hours_sunday: "Chủ nhật: Nghỉ",
+    form_error_send: "Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.",
+    form_error_network: "Lỗi kết nối mạng. Vui lòng kiểm tra lại đường truyền."
   },
   
   zh: {
@@ -282,7 +284,9 @@ const translations = {
     contact_map_title: "我們在谷歌地圖上的位置",
     contact_hours_title: "營業時間",
     contact_hours_week: "週一至週六：08:00 - 17:30",
-    contact_hours_sunday: "週日：休息"
+    contact_hours_sunday: "週日：休息",
+    form_error_send: "發送請求時發生錯誤。請稍後再試。",
+    form_error_network: "網路連線錯誤。請重新檢查您的網路連線。"
   },
   
   en: {
@@ -425,7 +429,9 @@ const translations = {
     contact_map_title: "Our Location on Google Maps",
     contact_hours_title: "Business Hours",
     contact_hours_week: "Monday - Saturday: 8:00 AM - 5:30 PM",
-    contact_hours_sunday: "Sunday: Closed"
+    contact_hours_sunday: "Sunday: Closed",
+    form_error_send: "An error occurred while sending. Please try again later.",
+    form_error_network: "Network error. Please check your connection."
   }
 };
 

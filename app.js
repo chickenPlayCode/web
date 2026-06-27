@@ -249,25 +249,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Mocking API Submission
+            // Formspree API Submission
             if (submitBtn) {
                 submitBtn.disabled = true;
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = `<span>${translations[currentLang].form_status_sending}</span>`;
                 
-                setTimeout(() => {
+                // CẤU HÌNH FORMSPREE: Thay "YOUR_FORMSPREE_ID" bằng mã ID Form của bạn từ Formspree.io
+                // Ví dụ: const formspreeId = "mvgonpqr";
+                const formspreeId = "YOUR_FORMSPREE_ID"; 
+                const endpoint = `https://formspree.io/f/${formspreeId}`;
+                
+                const formData = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message
+                };
+                
+                fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnText;
                     
-                    const successMsg = translations[currentLang].form_success_msg
-                        .replace('{name}', name)
-                        .replace('{phone}', phone)
-                        .replace('{email}', email);
-                    showFeedback(successMsg, 'success');
-                    
-                    // Reset form
-                    contactForm.reset();
-                }, 1500);
+                    if (response.ok) {
+                        const successMsg = translations[currentLang].form_success_msg
+                            .replace('{name}', name)
+                            .replace('{phone}', phone)
+                            .replace('{email}', email);
+                        showFeedback(successMsg, 'success');
+                        contactForm.reset();
+                    } else {
+                        showFeedback(translations[currentLang].form_error_send, 'error');
+                    }
+                })
+                .catch(error => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                    showFeedback(translations[currentLang].form_error_network, 'error');
+                });
             }
         });
     }
