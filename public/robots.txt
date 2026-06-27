@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chickenplaycode.github.io/web/sitemap.xml
