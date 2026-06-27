@@ -174,28 +174,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 5. Active Nav Link Indicator on Scroll
+    // 5. Active Nav Link Indicator based on Page
     // ==========================================
-    const sections = document.querySelectorAll('section[id]');
-    
-    const highlightNavMenu = () => {
-        const scrollPos = window.scrollY;
-        
-        sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 120; // Offset for sticky navbar
-            const sectionId = section.getAttribute('id');
-            const correspondingLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+    const updateActiveNav = () => {
+        const currentPath = window.location.pathname;
+        let currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+        if (!currentPage) {
+            currentPage = 'index.html';
+        }
+        const hash = window.location.hash;
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
             
-            if (correspondingLink && scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                correspondingLink.classList.add('active');
+            if (href === currentPage) {
+                link.classList.add('active');
+            } else if ((currentPage === 'index.html' || currentPage === '') && (href === 'index.html' || href.startsWith('index.html#'))) {
+                if (href === 'index.html' && !hash) {
+                    link.classList.add('active');
+                } else if (href.includes('#') && hash && href.endsWith(hash)) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            } else {
+                link.classList.remove('active');
             }
         });
     };
 
-    window.addEventListener('scroll', highlightNavMenu);
-    highlightNavMenu(); // Initial run
+    window.addEventListener('hashchange', updateActiveNav);
+    updateActiveNav(); // Initial run
 
     // ==========================================
     // 6. Contact Form Validation & Submission

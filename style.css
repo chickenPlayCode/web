@@ -1454,3 +1454,13 @@ img {
         top: calc(100% + 5px);
     }
 }
+
+/* --- Inner Page Hero Banner --- */
+.inner-hero-section {
+    height: 45vh !important;
+    min-height: 300px !important;
+}
+
+.inner-hero-section .hero-container {
+    padding-top: 50px;
+}

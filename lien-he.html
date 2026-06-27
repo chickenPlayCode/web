@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liên hệ với Luân Thành Phát tại Đồng Nai. Gửi yêu cầu tư vấn thương mại quốc tế, logistics và thông quan hải quan nhanh chóng.">
+    <meta name="author" content="Benny Chen">
+    <title>Liên hệ - Công ty TNHH Thương mại Dịch vụ Luân Thành Phát</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-brand">
+                <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                    <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                    <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                </svg>
+                <div class="logo-text-group">
+                    <span class="logo-subtext" data-i18n="card_comp_type">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                    <span class="logo-maintext">LUÂN THÀNH PHÁT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="gioi-thieu.html" class="nav-link" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="dich-vu.html" class="nav-link" data-i18n="nav_services">Dịch vụ</a></li>
+                    <li><a href="index.html#tai-sao-chon-dung" class="nav-link" data-i18n="nav_why_us">Tại sao chọn chúng tôi</a></li>
+                    <li><a href="lien-he.html" class="nav-link active" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Selector Dropdown -->
+                <div class="lang-selector">
+                    <button class="lang-btn" id="langBtn" aria-expanded="false" aria-label="Select Language">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="globe-icon">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="lang-text" id="currentLangText">VI</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="vi">
+                            <span class="lang-name">Tiếng Việt</span>
+                        </button>
+                        <button class="lang-option" data-lang="zh">
+                            <span class="lang-name">繁體中文</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-name">English</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="lien-he.html" class="btn btn-primary btn-sm" data-i18n="btn_contact_now">Liên hệ ngay</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Page Hero Section -->
+        <section class="hero-section inner-hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container text-center">
+                <div class="scroll-reveal">
+                    <h1 class="hero-headline" data-i18n="contact_hero_title">Liên hệ với Luân Thành Phát</h1>
+                    <p class="hero-slogan" data-i18n="contact_hero_subtitle">Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu tư vấn của bạn.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section section-padding">
+            <div class="container">
+                <div class="grid grid-2">
+                    
+                    <!-- Contact Details -->
+                    <div class="contact-info-panel scroll-reveal">
+                        <span class="section-badge" data-i18n="contact_badge">Thông tin liên hệ</span>
+                        <h2 class="section-title" data-i18n="contact_info_title">Thông tin văn phòng</h2>
+                        <p class="panel-desc" data-i18n="contact_desc">Quý khách hàng có nhu cầu hợp tác thương mại hoặc tư vấn dịch vụ, xin vui lòng liên hệ theo thông tin dưới đây hoặc gửi tin nhắn trực tiếp.</p>
+                        
+                        <!-- Corporate Business Card Mockup -->
+                        <div class="business-card">
+                            <div class="card-inner">
+                                <div class="card-header-decor">
+                                    <span class="card-logo">
+                                        <svg class="logo-svg" viewBox="0 0 100 100" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                                            <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                                            <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                                        </svg>
+                                    </span>
+                                    <span class="card-comp-type" data-i18n="card_comp_type">TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                                </div>
+                                <h3 class="card-company-name">LUÂN THÀNH PHÁT</h3>
+                                <hr class="card-divider">
+                                
+                                <div class="card-director">
+                                    <span class="label" data-i18n="card_director_label">Giám đốc</span>
+                                    <span class="value director-name">Benny Chen</span>
+                                </div>
+
+                                <div class="card-details">
+                                    <div class="card-detail-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                        <span class="text">Đường D16, Ấp 2, Xã Long An, Huyện Long Thành, Tỉnh Đồng Nai</span>
+                                    </div>
+                                    <div class="card-detail-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                        <span class="text">Mã số thuế: 3603747541</span>
+                                    </div>
+                                    <div class="card-detail-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        <span class="text">+84 966 816118 / +86 931 039881</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours Panel -->
+                        <div class="business-hours-panel" style="margin-top: 30px;">
+                            <h3 data-i18n="contact_hours_title">Giờ làm việc</h3>
+                            <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid rgba(12, 50, 96, 0.08); display: flex; justify-content: space-between;">
+                                    <span data-i18n="contact_hours_week">Thứ 2 - Thứ 7: 8h00 - 17h30</span>
+                                </li>
+                                <li style="padding: 8px 0; display: flex; justify-content: space-between; color: #ef4444;">
+                                    <span data-i18n="contact_hours_sunday">Chủ nhật: Nghỉ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel scroll-reveal">
+                        <form id="contactForm" class="contact-form">
+                            <h3 data-i18n="form_title">Gửi yêu cầu tư vấn</h3>
+                            <p data-i18n="form_subtitle">Vui lòng điền thông tin vào mẫu dưới đây, chúng tôi sẽ phản hồi lại trong vòng 24 giờ làm việc.</p>
+                            
+                            <div class="form-group">
+                                <label for="formName"><span data-i18n="form_label_name">Họ và Tên</span> <span class="required">*</span></label>
+                                <input type="text" id="formName" name="name" required data-i18n-placeholder="form_placeholder_name" placeholder="Nhập họ và tên của bạn">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="formEmail"><span data-i18n="form_label_email">Email liên hệ</span> <span class="required">*</span></label>
+                                <input type="email" id="formEmail" name="email" required data-i18n-placeholder="form_placeholder_email" placeholder="example@gmail.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formPhone"><span data-i18n="form_label_phone">Số điện thoại</span> <span class="required">*</span></label>
+                                <input type="tel" id="formPhone" name="phone" required data-i18n-placeholder="form_placeholder_phone" placeholder="Nhập số điện thoại của bạn">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formMessage"><span data-i18n="form_label_message">Nội dung yêu cầu</span> <span class="required">*</span></label>
+                                <textarea id="formMessage" name="message" rows="4" required data-i18n-placeholder="form_placeholder_message" placeholder="Quý khách hàng cần tư vấn về dịch vụ thương mại, logistics hay xuất nhập khẩu?"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                                <span data-i18n="btn_submit_form">Gửi tin nhắn</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                            <div class="form-feedback" id="formFeedback"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Embedded Google Maps Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-badge" data-i18n="contact_map_title">Vị trí</span>
+                    <h2 class="section-title" data-i18n="contact_map_title">Vị trí của chúng tôi trên Google Maps</h2>
+                </div>
+                <div class="map-wrapper scroll-reveal" style="border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-md); height: 450px; border: 1px solid rgba(12, 50, 96, 0.1);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9806935274577!2d106.94723047586524!3d10.774431959938833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31751f50f4a7c865%3A0xe4416a2efec5062c!2zTMOgbmcgQW4sIExvbmcgVGjDoG5oLCDEkOG7k25nIE5haSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1719280000000!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo-brand">
+                    <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 28 20 L 37 20 L 28 77 L 47 77 L 45 88 L 17 88 Z" fill="#2e7d32" />
+                        <path d="M 44 32 L 82 32 L 80 41 L 69 41 L 60 88 L 51 88 L 60 41 L 46 41 Z" fill="currentColor" />
+                        <ellipse cx="65" cy="50" rx="21" ry="17" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(-20 65 50)" />
+                    </svg>
+                    <div class="logo-text-group">
+                        <span class="logo-subtext footer-logo-subtext" data-i18n="card_comp_type">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ</span>
+                        <span class="logo-maintext footer-logo-maintext">LUÂN THÀNH PHÁT</span>
+                    </div>
+                </a>
+                <p class="brand-desc" data-i18n="footer_desc">Sự hài lòng của khách hàng và uy tín dịch vụ là kim chỉ nam hàng đầu trong mọi hoạt động thương mại của chúng tôi.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 data-i18n="footer_quick_links">Đường dẫn nhanh</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="gioi-thieu.html" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="dich-vu.html" data-i18n="nav_services">Dịch vụ</a></li>
+                    <li><a href="index.html#tai-sao-chon-dung" data-i18n="nav_why_us">Tại sao chọn chúng tôi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-col">
+                <h4 data-i18n="footer_contact_header">Liên hệ</h4>
+                <p><strong data-i18n="footer_addr_label">Địa chỉ:</strong> Đường D16, Ấp 2, Xã Long An, Huyện Long Thành, Tỉnh Đồng Nai</p>
+                <p><strong>Hotline:</strong> +84 966 816118 / +86 931 039881</p>
+                <p><strong>Mã số thuế:</strong> 3603747541</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p data-i18n="footer_copyright">&copy; 2026 Công ty TNHH Thương mại Dịch vụ Luân Thành Phát. All Rights Reserved.</p>
+                <p data-i18n="footer_designer">Được thiết kế chuyên nghiệp & uy tín.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
