@@ -15,22 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const langBtn = document.getElementById('langBtn');
     const langDropdown = document.getElementById('langDropdown');
     const langOptions = document.querySelectorAll('.lang-option');
-    const currentFlag = document.getElementById('currentFlag');
     const currentLangText = document.getElementById('currentLangText');
-
-    const flags = {
-        vi: '🇻🇳',
-        zh: '🇹🇼',
-        en: '🇬🇧'
-    };
 
     const updateLanguage = (lang) => {
         currentLang = lang;
         localStorage.setItem('lang', lang);
         document.documentElement.lang = lang;
         
-        // Update button text and flag
-        if (currentFlag) currentFlag.textContent = flags[lang];
+        // Update button text
         if (currentLangText) currentLangText.textContent = lang.toUpperCase();
         
         // Update active state in dropdown
